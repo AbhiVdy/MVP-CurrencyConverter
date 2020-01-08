@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="home_tab_title_allRates">All Rates</string>
+    <string name="home_tab_title_converter">Converter</string>
+    <string name="home_label_ratesConversion"><![CDATA[Rates & conversions]]></string>
+
+    <string name="name_EUR">Euro</string>
+    <string name="name_AUD">Australian Doller</string>
+    <string name="name_BGN">Bulgarian lev</string>
+    <string name="name_BRL">Brazilian real</string>
+    <string name="name_CAD">Canadian dollar</string>
+    <string name="name_CHF">Swiss franc</string>
+    <string name="name_CNY">Renminbi</string>
+    <string name="name_CZK">Czech koruna</string>
+    <string name="name_DKK">Danish krone</string>
+    <string name="name_GBP">Pound sterling</string>
+    <string name="name_HKD">Hong Kong dollar</string>
+    <string name="name_HRK">Brazilian real</string>
+    <string name="name_HUF">Brazilian real</string>
+    <string name="name_IDR">Brazilian real</string>
+    <string name="name_ILS">Brazilian real</string>
+    <string name="name_INR">Brazilian real</string>
+    <string name="name_ISK">Bulgarian lev</string>
+    <string name="name_JPY">Brazilian real</string>
+    <string name="name_KRW">Brazilian real</string>
+    <string name="name_MXN">Brazilian real</string>
+    <string name="name_MYR">Brazilian real</string>
+    <string name="name_NOK">Brazilian real</string>
+    <string name="name_NZD">Brazilian real</string>
+    <string name="name_PHP">Bulgarian lev</string>
+    <string name="name_PLN">Brazilian real</string>
+    <string name="name_RON">Brazilian real</string>
+    <string name="name_RUB">Brazilian real</string>
+    <string name="name_SEK">Brazilian real</string>
+    <string name="name_SGD">Brazilian real</string>
+    <string name="name_THB">Brazilian real</string>
+    <string name="name_TRY">Brazilian real</string>
+    <string name="name_USD">Brazilian real</string>
+    <string name="name_ZAR">Brazilian real</string>
+</resources>
