@@ -1,6 +1,5 @@
 package com.revolut.currencyconverter.di.modules
 
-import com.revolut.currencyconverter.di.datastores.CurrencyDataStore
 import com.revolut.currencyconverter.di.datastores.CurrencyDataStoreImpl
 import com.revolut.currencyconverter.network.services.CurrencyConverterService
 import dagger.Module
@@ -15,6 +14,4 @@ class RepositoryModule {
     fun provideCurrencyDataStore(currencyService: CurrencyConverterService) : CurrencyDataStoreImpl {
         return CurrencyDataStoreImpl(currencyService)
     }
-
-
 }

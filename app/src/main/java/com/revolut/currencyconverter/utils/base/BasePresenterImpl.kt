@@ -49,9 +49,10 @@ abstract class BasePresenterImpl<V : BaseView> : BasePresenter<V> {
                 if (showLoading)
                     view.showLoading()
             }
+            .delay(1, TimeUnit.SECONDS)
             .subscribeOn(Schedulers.io())
+            .repeatUntil { viewStopped || base.toString() != currentBase }
             .observeOn(AndroidSchedulers.mainThread())
-
             .subscribe(
                 { value -> currentResponse = value
                     getView().dismissLoading()
@@ -62,8 +63,6 @@ abstract class BasePresenterImpl<V : BaseView> : BasePresenter<V> {
                     onError()
                     showLoading = true
                 })
-            //.repeatUntil { viewStopped || base.toString() != currentBase }
-            //.delay(3, TimeUnit.SECONDS)
     }
 
     private fun onError() {

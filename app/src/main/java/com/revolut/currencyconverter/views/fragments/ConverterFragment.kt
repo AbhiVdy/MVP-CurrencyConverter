@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_converter.*
 import javax.inject.Inject
 
 class ConverterFragment : BaseFragment(), ConverterView {
+
     override fun onAmountChange(amount: Float) {
         currencyAdapter?.updateDefaultAmount(amount)
     }
@@ -44,7 +45,9 @@ class ConverterFragment : BaseFragment(), ConverterView {
     }
 
     private fun updateCurrencyValues(currencyList: ArrayList<CurrencyViewerModel>) {
-        currencyAdapter?.setList(currencyList)
+        if(!rvCurrency.isComputingLayout){
+            currencyAdapter?.setList(currencyList)
+        }
     }
 
     override fun onUpdateData() {

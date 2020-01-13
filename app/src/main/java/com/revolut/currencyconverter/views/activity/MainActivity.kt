@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         tabsAdapter.addFragment(RatesFragment(), getString(R.string.home_tab_title_converter))
         tabsAdapter.addFragment(ConverterFragment(), getString(R.string.home_tab_title_allRates))
         viewpager.adapter = tabsAdapter
+        viewpager.currentItem = 1
         tabLayout.setupWithViewPager(viewpager)
     }
 }

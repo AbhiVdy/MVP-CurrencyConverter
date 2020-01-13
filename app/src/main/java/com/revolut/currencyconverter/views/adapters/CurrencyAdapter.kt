@@ -69,28 +69,13 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.CurrencyViewHolder>
             itemView.ivFlag.setImageResource(model.flag)
             itemView.tvCurrencyCode.text = model.currencyCode.name
             itemView.tvCurrencyName.text = model.currencyName
-            val calculatedVal =  (model.value*defaultAmount)
-            itemView.etValue.removeTextChangedListener(null)
-            itemView.etValue.setText(calculatedVal.toString())
+            val calculatedVal = model.value * defaultAmount
             itemView.etValue.imeOptions = EditorInfo.IME_ACTION_DONE
-            /*itemView.etValue.addTextChangedListener {
-                object : TextWatcher {
-                    override fun afterTextChanged(s: Editable?) {
-                        val demo = s
-                    }
 
-                    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-                    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                        Toast.makeText(itemView.context, "SOME TEXT", Toast.LENGTH_LONG).show()
-                        model.value = s.toString().toFloat()
-                        defaultAmount = s.toString().toFloat()
-                        onValueChange?.invoke(model, defaultAmount)
-                    }
-                }
-            }*/
+            itemView.etValue.removeTextChangedListener(textChange)
+            itemView.etValue.setText(calculatedVal.toString())
             itemView.etValue.addTextChangedListener(textChange)
-            /*itemView.etValue.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            itemView.etValue.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
                 layoutPosition.takeIf { it > 0 }?.also { currentPosition ->
                     currencyList.removeAt(currentPosition).also {
                         currencyList.add(0, it)
@@ -98,7 +83,7 @@ class CurrencyAdapter : RecyclerView.Adapter<CurrencyAdapter.CurrencyViewHolder>
                     }
                     notifyItemMoved(currentPosition, 0)
                 }
-            }*/
+            }
         }
     }
 }
