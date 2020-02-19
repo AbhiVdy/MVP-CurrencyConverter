@@ -1,4 +1,4 @@
-# MVP-CurrencyConverter
+# MVP-Kotlin-Architecture
 
 A currency converter application using MVP-Clean Architecture along with repository pattern
 
